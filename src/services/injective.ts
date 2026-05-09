@@ -1,6 +1,4 @@
 // Injective 区块链交互服务
-import { MsgSend } from '@injectivelabs/sdk-ts';
-import { BigNumber } from 'bignumber.js';
 import type { Portfolio, TokenBalance, InjectiveWallet } from '../types';
 
 // Injective 主网配置
