@@ -5,11 +5,10 @@ import { useAIAnalysis } from '../hooks/useAIAnalysis';
 import { WalletButton } from './WalletButton';
 import { PortfolioChart } from './PortfolioChart';
 import { AIAnalysisPanel } from './AIAnalysisPanel';
-import type { Portfolio } from '../types';
 
 export function Dashboard() {
-  const { wallet, portfolio, isConnected, loading, error, refreshBalances } = useWallet();
-  const { analyze, loading: aiLoading } = useAIAnalysis();
+  const { portfolio, isConnected, loading, error, refreshBalances } = useWallet();
+  const { analyze } = useAIAnalysis();
 
   // 自动刷新余额（每30秒）
   useEffect(() => {

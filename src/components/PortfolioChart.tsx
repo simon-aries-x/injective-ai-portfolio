@@ -14,9 +14,9 @@ interface PortfolioChartProps {
 export function PortfolioChart({ portfolio }: PortfolioChartProps) {
   const data = portfolio.balances
     .filter(b => b.usdValue && b.usdValue > 0)
-    .map((b, index) => ({
+    .map(b => ({
       name: b.denom.substring(0, 8),
-      value: b.usdValue,
+      value: b.usdValue as number,
       fullName: b.denom,
     }))
     .sort((a, b) => b.value - a.value);
@@ -39,17 +39,17 @@ export function PortfolioChart({ portfolio }: PortfolioChartProps) {
             cx="50%"
             cy="50%"
             labelLine={false}
-            label={(entry) => `$${entry.value.toLocaleString()}`}
+            label={(entry) => `$${(entry.value as number).toLocaleString()}`}
             outerRadius={80}
             fill="#8884d8"
             dataKey="value"
           >
-            {data.map((entry, index) => (
+            {data.map((_entry, index) => (
               <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
             ))}
           </Pie>
           <Tooltip
-            formatter={(value: number) => `$${value.toLocaleString()}`}
+            formatter={(value) => `$${(value as number || 0).toLocaleString()}`}
           />
           <Legend />
         </PieChart>

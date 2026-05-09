@@ -1,5 +1,5 @@
 // AI 分析服务
-import type { Portfolio, AIAnalysis, TokenBalance } from '../types';
+import type { Portfolio, AIAnalysis } from '../types';
 
 // 环境变量或运行时注入
 let OPENAI_API_KEY = '';

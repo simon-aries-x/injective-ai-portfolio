@@ -6,13 +6,6 @@ export const INJECTIVE_CHAIN_ID = 'injective-1';
 export const INJECTIVE_RPC = 'https://injective-rpc.polkachu.com';
 export const INJECTIVE_REST = 'https://injective-api.polkachu.com';
 
-// 常用代币地址（Injective）
-const TOKENS = {
-  INJ: 'inj1...', // INJ 原生代币
-  USDT: 'peggy0xdAC17F958D2ee523a2206206994597C13D831ec7', // USDT
-  USDC: 'peggy0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48', // USDC
-};
-
 // 连接钱包
 export async function connectWallet(): Promise<InjectiveWallet | null> {
   try {
