@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🤖 AI Injective 投资组合分析师
 
 > **Injective Solo AI Builder Sprint 参赛项目**
@@ -27,7 +28,7 @@
 
 ```bash
 # 克隆仓库
-git clone https://github.com/simonaries/injective-ai-portfolio.git
+git clone https://github.com/simon-aries-x/injective-ai-portfolio.git
 cd injective-ai-portfolio
 
 # 安装依赖
@@ -178,3 +179,7 @@ MIT
 
 **Built with ❤️ for the Injective Solo AI Builder Sprint**  
 2026-05-09
+=======
+# injective-ai-portfolio
+🤖 AI Injective 投资组合分析师 - Injective Solo AI Builder Sprint 参赛项目
+>>>>>>> origin/main
